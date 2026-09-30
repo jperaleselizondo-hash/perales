@@ -1,0 +1,207 @@
+---
+import '../styles/global.css';
+
+const career = [
+  {
+    number: '01',
+    title: 'Commercial aviation',
+    body: 'I started my career as a commercial pilot. Aviation taught me to think in systems, procedures, checklists, risk, and operational discipline.'
+  },
+  {
+    number: '02',
+    title: 'Sales',
+    body: 'I moved into insurance sales and qualified for MDRT. That period taught me persuasion, trust, incentives, follow-up, and how people make high-consideration decisions.'
+  },
+  {
+    number: '03',
+    title: 'Industrial B2B marketing',
+    body: 'I built and operated a marketing agency for industrial suppliers, working across direct-response copy, landing pages, Google Ads, lead generation, and client acquisition. That experience is where the idea behind Goodz began to form.'
+  },
+  {
+    number: '04',
+    title: 'Ecommerce & media',
+    body: 'I have also operated a Shopify ecommerce business and created educational content around Austrian economics, psychology, entrepreneurship, and related subjects.'
+  },
+  {
+    number: '05',
+    title: 'Software & product',
+    body: 'Today most of my attention is on Goodz, where product, growth, workflows, software, sales, and business operations converge.'
+  }
+];
+
+const work = [
+  ['Product', 'Product strategy, workflow design, UX, marketplace mechanics, database logic, APIs, integrations, and no-code / low-code development.'],
+  ['Growth', 'B2B positioning, copywriting, landing pages, Google Ads, lead generation, sales funnels, acquisition, and go-to-market.'],
+  ['Business', 'Sales, business models, supplier markets, procurement workflows, trust, incentives, customer discovery, and operational systems.']
+];
+
+const thinking = [
+  ['PEOPLE', 'Psychology, persuasion, trust, incentives, decision-making.'],
+  ['MARKETS', 'Entrepreneurship, Austrian economics, competition, exchange, subjective value.'],
+  ['SYSTEMS', 'Software, workflows, databases, processes, automation, marketplaces.']
+];
+
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Jesús Perales — founder of Goodz. Product, growth, B2B software, marketplaces, and business systems." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Jesús Perales — Founder & Product Builder</title>
+  </head>
+  <body>
+    <main>
+      <header class="nav shell">
+        <a class="brand" href="#top"><span class="status-dot"></span>Jesús Perales</a>
+        <nav class="nav-links">
+          <a href="#goodz">Goodz</a>
+          <a href="#path">Background</a>
+          <a href="#work">What I do</a>
+          <a class="nav-cta" href="#collaborate">Collaborate</a>
+        </nav>
+      </header>
+
+      <section class="hero shell" id="top">
+        <div class="hero-grid">
+          <div>
+            <div class="label">Founder / Product / Growth</div>
+            <h1>I build products, systems, and markets.</h1>
+            <p class="hero-copy">
+              Founder of <strong>Goodz</strong>, a B2B procurement and supplier discovery platform.
+              My background spans commercial aviation, sales, industrial B2B marketing, ecommerce, and software product development.
+              Today I work at the intersection of <strong>product, growth, and business operations.</strong>
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#goodz">See what I’m building <span>→</span></a>
+              <a class="text-link" href="#collaborate">Open to selected collaborations</a>
+            </div>
+          </div>
+
+          <aside class="hero-side">
+            <p><strong>Current</strong><br />Founder @ Goodz</p>
+            <p><strong>Focus</strong><br />B2B software · marketplaces · supplier systems</p>
+            <p><strong>Useful around</strong><br />Product · positioning · GTM · growth · operational software</p>
+          </aside>
+        </div>
+        <div class="hero-foot">commercial thinking + product thinking</div>
+      </section>
+
+      <section class="section goodz rule" id="goodz">
+        <div class="shell goodz-grid">
+          <div>
+            <div class="label">Current focus</div>
+            <h2>Building Goodz.</h2>
+          </div>
+          <div class="goodz-copy">
+            <p>
+              Goodz is where most of my previous experience converges.
+              Years working with industrial suppliers taught me how companies find customers, how buyers evaluate vendors, and how much business still happens through spreadsheets, email, WhatsApp, PDFs, and fragmented processes.
+            </p>
+            <p>I decided to build infrastructure around that problem.</p>
+            <p>
+              As a solo founder, I move between the commercial and technical sides of the company every day.
+              That means working across product strategy, UX, workflows, backend logic, positioning, customer acquisition, sales, analytics, and operations.
+            </p>
+            <div class="stack">
+              <span>Product strategy</span>
+              <span>UX & workflow design</span>
+              <span>Backend logic & integrations</span>
+              <span>Positioning & growth</span>
+              <span>Sales & operations</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rule" id="path">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="label">Background</div>
+              <h2>Different industries. A consistent theme.</h2>
+            </div>
+            <p>
+              I have spent my career learning how people make decisions, how businesses create value, how markets coordinate, and how systems can support that process.
+            </p>
+          </div>
+          <div class="path-list">
+            {career.map((item) => (
+              <article class="path-row">
+                <div class="path-num">{item.number}</div>
+                <div class="path-title">{item.title}</div>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section rule" id="work">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="label">What I work on</div>
+              <h2>Most useful where product, business, and customer behavior overlap.</h2>
+            </div>
+            <p>
+              I am not trying to be a specialist in every layer. I am strongest when the problem requires connecting customer needs, business logic, product decisions, and go-to-market execution.
+            </p>
+          </div>
+
+          <div class="work-grid">
+            {work.map(([title, body], index) => (
+              <article class="work-card">
+                <span class="index">0{index + 1}</span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section thinking rule">
+        <div class="shell">
+          <div class="label">How I think</div>
+          <h2>I’m interested in the intersection of people, markets, and systems.</h2>
+          <div class="thinking-grid">
+            {thinking.map(([title, body]) => (
+              <article class="thinking-card">
+                <div class="mini">{title}</div>
+                <p>{body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section collab" id="collaborate">
+        <div class="shell">
+          <div class="label">Selected collaborations</div>
+          <h2>Goodz is my primary focus. I’m still open to interesting problems.</h2>
+          <p>
+            I am open to selected startup collaborations where I can contribute across product, positioning, go-to-market, growth, or operational software — especially when the problem sits between what should be built, how it should work, and how it reaches the market.
+          </p>
+          <div class="roles">
+            <span>Product Lead</span>
+            <span>Growth / Marketing Lead</span>
+            <span>Product + GTM Advisor</span>
+            <span>Early-stage Collaborator</span>
+          </div>
+          <a class="button" href="mailto:hello@example.com?subject=Collaboration">Start a conversation <span>→</span></a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="shell footer-inner">
+          <p><strong>Jesús Perales</strong><br />Founder · Product · Growth</p>
+          <p>© {year}</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
